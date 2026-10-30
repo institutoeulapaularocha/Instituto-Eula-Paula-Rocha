@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instituto de Saúde Comunitária: informação, prevenção e cuidado para a comunidade.">
+  <title>Instituto Eula Paula Rocha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="topo">
+    <a class="marca" href="index.html" aria-label="Instituto Eula Paula Rocha - início">
+
+      <img src="img/logo.jpg" id="logo" alt="Logo do Instituto Eula Paula Rocha">
+
+      <span class="marca-texto">
+        <small>Instituto</small>
+        <strong>Eula Paula Rocha</strong>
+        <em>Juntos por uma comunidade mais saudável</em>
+      </span>
+    </a>
+
+    <button class="btn-menu" id="abrirMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"
+      type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+
+  <!-- MENU LATERAL RESPONSIVO -->
+  <div class="gaveta" id="menu" aria-hidden="true">
+    <div class="gaveta-painel" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+      <div class="gaveta-cabecalho">
+       
+        <button class="fechar" id="fecharMenu" type="button" aria-label="Fechar menu">&times;</button>
+      </div>
+      <nav aria-label="Navegação principal">
+        <a href="#inicio">Início <span aria-hidden="true">›</span></a>
+        <a href="#sobre">Sobre o instituto <span aria-hidden="true">›</span></a>
+        <a href="#atuacao">Áreas de atuação <span aria-hidden="true">›</span></a>
+        <a href="#agenda">Próximas ações <span aria-hidden="true">›</span></a>
+        <a href="#duvidas">Dúvidas frequentes <span aria-hidden="true">›</span></a>
+        <a href="#contato">Contato <span aria-hidden="true">›</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- INÍCIO -->
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">BEM-VINDO(A)</p>
+        <h1>Cuidar também é <span>transformar vidas.</span></h1>
+        <p>
+          O <strong>Instituto Eula Paula Rocha</strong> desenvolve ações de saúde, educação e bem-estar, levando informação, prevenção e apoio para familias e comunidades, contribuindo para uma sociedade mais saudável e solidária.
+        </p>
+        <a class="button button-pink" href="#sobre">
+          Conheça nosso trabalho <span>→</span>
+        </a>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-blob"></div>
+        <div class="heart-illustration" aria-hidden="true">♡</div>
+        <div class="stethoscope" aria-hidden="true">⌕</div>
+        <span class="spark spark-one">✦</span>
+        <span class="spark spark-two">✧</span>
+        <p class="art-note">Saúde é cuidado<br>em cada detalhe.</p>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section about-section" id="sobre">
+      <div class="about-copy">
+        <p class="eyebrow">CONHEÇA MAIS</p>
+        <h2>Sobre o Instituto</h2>
+        <p style="text-align: justify;">
+          O <strong>Instituto Eula Paula Rocha</strong> é uma iniciativa social comprometida com a promoção da saúde, da educação e do bem-estar, lenvado informação, prevenção e apoio para familias e comunidades.
+        </p>
+        <p class="about-extra" style="text-align: justify;">
+          Acreditamos que o cuidado transforma realidades. Por isso, desenvolvemos ações, projetos e parcerias que fortalecem a comunidade e contribuem para uma sociedade mais saudável, consciente e solidária.
+        </p>
+         <p style="text-align: justify;">
+          Nosso propósito é estar perto das pessoas, orientando, acolhendo e construindo, juntos, um futuro com mais qualidade de vida para todos. 
+        </p>
+      </div>
+
+      <div class="quote-art">
+        <span>♡</span>
+        <p>Saúde também é<br><strong>qualidade de vida!</strong></p>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section class="section services-section" id="atuacao">
+      <p class="eyebrow">NOSSAS ÁREAS DE ATUAÇÃO</p>
+      <h2>O que oferecemos</h2>
+
+      <div class="service-grid">
+        <a href="page1.html">
+          <article class="service-card pink-card">
+            <span class="service-icon">♡</span>
+            <div>
+              <h3>Saúde e prevenção</h3>
+              <p>Conheça o Calendário da Saúde.</p>
+            </div>
+            <span class="card-arrow">›</span> 
+          </article>
+       </a>
+
+        <a href="page2.html">
+          <article class="service-card blue-card"> 
+           
+            <span class="service-icon">＋</span>
+            <div>
+              <h3>Colaboradores do Instituto</h3>
+              <p>Conheça nossos parceiros.</p>
+            </div>
+            <span class="card-arrow">›</span> 
+          </article>
+       </a>
+
+      </div>
+    </section>
+
+    <!-- AGENDA PÚBLICA -->
+    <section class="section agenda-section" id="agenda">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FIQUE POR DENTRO</p>
+          <h2>Próximas ações</h2>
+          <p class="section-intro">
+            Confira as atividades e iniciativas do instituto na comunidade.
+          </p>
+        </div>
+        <span class="agenda-decoration" aria-hidden="true">✳</span>
+      </div>
+
+      <!-- O JavaScript carrega os eventos do Firebase aqui -->
+      <div id="eventsList" class="events-list" aria-live="polite">
+        <div class="empty-state">
+          <span class="empty-icon">♡</span>
+          <h3>Agenda em preparação</h3>
+          <p>Em breve, novas ações e atividades serão divulgadas por aqui.</p>
+        </div>
+      </div>
+
+      <p class="agenda-note">
+        As informações desta agenda são divulgadas pelo instituto.
+        Em caso de dúvidas, entre em contato.
+      </p>
+    </section>
+
+    <!-- MENSAGEM EDUCATIVA -->
+    <section class="section education-section">
+      <div class="education-mark">✦</div>
+      <div>
+        <p class="eyebrow">INFORMAÇÃO TAMBÉM É CUIDADO</p>
+        <h2>Pequenas atitudes fazem diferença.</h2>
+        <p>
+          Buscar informação confiável e manter os cuidados preventivos
+          ajuda a construir uma comunidade mais saudável.
+        </p>
+      </div>
+      <span class="education-heart" aria-hidden="true">♡</span>
+    </section>
+
+    <!-- DÚVIDAS FREQUENTES -->
+    <section class="section faq-section" id="duvidas">
+      <p class="eyebrow">PODEMOS AJUDAR?</p>
+      <h2>Dúvidas frequentes</h2>
+
+      <div class="faq-list">
+        <details>
+          <summary>Qual é o propósito do Instituto Eula Paula Rocha?</summary>
+          <p>
+           Nosso propósito é promover saúde, educação e bem-estar, desenvolvendo ações sociais que levam informação, prevenção, acolhimento e qualidade de vida às famílias e comunidades.
+          </p>
+        </details>
+
+        <details>
+          <summary>Quais ações o Instituto realiza?</summary>
+          <p>
+           Realizamos palestras educativas, campanhas de prevenção, ações sociais, orientações em saúde, atividades comunitárias e projetos voltados à promoção da qualidade de vida.
+          </p>
+        </details>
+
+        <details>
+          <summary> Quem pode participar das ações?</summary>
+          <p>
+            Nossas iniciativas são direcionadas à comunidade em geral, contemplando crianças, jovens, adultos, idosos e famílias que desejam participar de atividades de conscientização, prevenção e cuidado.</p>
+        </details>
+
+        <details>
+          <summary>Como posso participar das próximas ações?</summary>
+          <p>
+            Acompanhe nosso site e nossas redes sociais. Divulgamos nossa programação, campanhas, eventos e oportunidades de participação.
+          </p>
+        </details>
+
+         <details>
+          <summary> Como posso ser um voluntário ou parceiro do Instituto?</summary>
+          <p>
+            Acreditamos que grandes transformações acontecem quando caminhamos juntos! Você pode contribuir como voluntário, profissional parceiro, empresa apoiadora ou instituição colaboradora.
+          </p>
+        </details>
+
+         <details>
+          <summary> O Instituto oferece atendimento médico?</summary>
+          <p>
+           O Instituto desenvolve ações educativas, preventivas e de orientação em saúde. Essas atividades não substituem consultas, diagnósticos ou tratamentos realizados por profissionais habilitados.
+          </p>
+        </details>
+
+         <details>
+          <summary> Como posso apoiar o Instituto?</summary>
+          <p>
+           Você pode apoiar divulgando nossas iniciativas, participando das campanhas, estabelecendo parcerias ou contribuindo com nossos projetos sociais.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer" id="contato">
+    <div class="footer-wave"></div>
+    <h2>Vamos conversar?</h2>
+    <p>Entre em contato para saber mais sobre o trabalho do instituto.</p>
+
+    <div class="footer-links">
+
+      <a href="https://instagram.com/instituto.eulapaularocha" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <span><i class="fa-brands fa-instagram"></i></span>
+        <b>Instagram</b>
+      </a>
+
+      <a href="https://wa.me/5585988330211" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <span><i class="fa-brands fa-whatsapp"></i></span>
+        <b>WhatsApp</b>
+      </a>
+
+      <a href="mailto:instituto.epr@gmail.com" aria-label="E-mail">
+        <span><i class="fa-regular fa-envelope"></i></span>
+        <b>E-mail</b>
+      </a>
+
+    </div>
+
+    <!-- Substitua pelos dados reais do cliente -->
+    <p class="footer-location"> <span>Maracanaú - CE</span></p>
+    <p class="copyright">© Instituto Eula Paula Rocha <span id="year"></span>
+    </p>
+
+    <!-- Acesso administrativo discreto -->
+    <button class="admin-link" id="openAdmin" type="button">
+      Área administrativa
+    </button>
+  </footer>
+
+  <!-- JANELA DE LOGIN E ADMINISTRAÇÃO -->
+  <div class="modal-backdrop" id="adminModal" hidden>
+    <section class="admin-modal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+
+      <button class="modal-close" id="closeAdmin" aria-label="Fechar">×</button>
+
+      <!-- LOGIN -->
+      <div id="loginPanel">
+        <p class="eyebrow">ACESSO RESTRITO</p>
+        <h2 id="adminTitle">Área administrativa</h2>
+        <p class="admin-description">
+          Entre para gerenciar as ações divulgadas no site.
+        </p>
+
+        <form id="loginForm" class="admin-form">
+          <label for="adminEmail">E-mail</label>
+          <input id="adminEmail" type="email" autocomplete="username" required>
+
+          <label for="adminPassword">Senha</label>
+          <input id="adminPassword" type="password" autocomplete="current-password" required>
+
+          <button class="button button-pink" type="submit">Entrar</button>
+          <p class="form-message" id="loginMessage" role="status"></p>
+        </form>
+      </div>
+
+      <!-- PAINEL DO CLIENTE -->
+      <div id="dashboardPanel" hidden>
+        <p class="eyebrow">GERENCIAR AGENDA</p>
+        <h2 id="formTitle">Adicionar nova ação</h2>
+        <p class="admin-description">
+          Preencha os dados abaixo. A publicação aparece na agenda pública.
+        </p>
+
+        <form id="eventForm" class="admin-form">
+          <label for="eventTitle">Nome da ação *</label>
+          <input id="eventTitle" maxlength="100" required placeholder="Ex.: Dia de prevenção à saúde">
+
+          <label for="eventDescription">Descrição *</label>
+          <textarea id="eventDescription" maxlength="500" rows="3" required
+            placeholder="Conte brevemente como será a ação"></textarea>
+
+          <div class="form-row">
+            <div>
+              <label for="eventDate">Data *</label>
+              <input id="eventDate" type="date" required>
+            </div>
+            <div>
+              <label for="eventTime">Horário *</label>
+              <input id="eventTime" type="time" required>
+            </div>
+          </div>
+
+          <label for="eventLocation">Local *</label>
+          <input id="eventLocation" maxlength="160" required placeholder="Endereço ou nome do local">
+
+          <label for="eventContact">Informação extra (opcional)</label>
+          <input id="eventContact" maxlength="160" placeholder="Ex.: Levar documento com foto">
+
+          <div class="form-row">
+            <button class="button button-pink" type="submit" id="saveEvent">
+              Publicar ação
+            </button>
+            <button class="button button-outline" type="button" id="cancelEdit" hidden>
+              Cancelar edição
+            </button>
+          </div>
+
+          <p class="form-message" id="eventMessage" role="status"></p>
+        </form>
+
+        <div class="admin-events-heading">
+          <h3>Ações cadastradas</h3>
+          <button class="text-button" id="logoutButton" type="button">Sair</button>
+        </div>
+
+        <div id="adminEventsList" class="admin-events-list"></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      const menu = document.getElementById("menu");
+      const abrir = document.getElementById("abrirMenu");
+      const fechar = document.getElementById("fecharMenu");
+
+      if (!menu || !abrir || !fechar) {
+        console.error("Menu: confira os elementos #menu, #abrirMenu e #fecharMenu no index.html.");
+        return;
+      }
+
+      function alternarMenu(aberto) {
+        menu.classList.toggle("aberta", aberto);
+        menu.setAttribute("aria-hidden", String(!aberto));
+        abrir.setAttribute("aria-expanded", String(aberto));
+        abrir.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+        document.body.style.overflow = aberto ? "hidden" : "";
+
+        if (aberto) fechar.focus();
+        else abrir.focus();
+      }
+
+      abrir.addEventListener("click", () => alternarMenu(true));
+      fechar.addEventListener("click", () => alternarMenu(false));
+
+      menu.addEventListener("click", (evento) => {
+        if (evento.target === menu) alternarMenu(false);
+      });
+
+      menu.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => alternarMenu(false));
+      });
+
+      document.addEventListener("keydown", (evento) => {
+        if (evento.key === "Escape" && menu.classList.contains("aberta")) {
+          alternarMenu(false);
+        }
+      });
+    })();
+  </script>
+
+  <!-- O arquivo JS conecta a página ao Firebase -->
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>

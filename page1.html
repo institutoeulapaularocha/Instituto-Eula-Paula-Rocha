@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Pontoway | Nossa Equipe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Caveat:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Oswald:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+             --texto-suave: #5f6b80;
+            --roxo: #8a6bb3;
+            --amarelo: #d3ac58c9;
+            --vermelho: #ed5c6ef0;
+            --lilas: #b29de3;
+            --navy: #1b3a6e;
+            --verde: #81bf89;
+            --branco: #fffafc;
+            --rosa: #db9cb5;
+            --rosa-bg: #fde8ef;
+            --azul: #80a7e7;
+            --azul-bg: #e3f1fb;
+            --amar-bg: #fff4d6;
+            --roxo-bg: #efe9fb;
+            --texto: #2b3a55;
+            --suave: #6b7893;
+            --pink-dark: #e8478b;
+            --shadow: 0 12px 35px rgba(24, 55, 101, .07);
+            --marinho: #1b3a6e;
+            --rosa-claro: #fde6ee;
+            --azul-claro: #e1f0fb;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #e7e7e7;
+            color: #f1f1f1;
+            overflow-x: hidden;
+        }
+
+
+            /* Container "celular" */
+        .app {
+            width: 100%;
+            max-width: 1200px;
+            min-height: 100vh;
+            margin: 0 auto;
+
+            background: var(--fundo);
+
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+            overflow-x: clip;
+        }
+
+ @media (prefers-reduced-motion: reduce) {
+
+            .btn-menu span,
+            .gaveta,
+            .gaveta-painel,
+            .gaveta nav a {
+                transition: none;
+            }
+        }
+
+        /* Banner */
+        .banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 130px;
+            padding: 18px;
+            background: linear-gradient(100deg,#fb98bb 45%, #6aa9d7);
+            overflow: hidden;
+            flex-direction: row;
+        }
+
+        .banner-texto {
+            position: relative;
+            z-index: 1;
+            max-width: 55%;
+        }
+
+        .banner h1 {
+            font-size: 24px;
+            line-height: 1.15;
+            font-weight: 500;
+            color: var(--marinho);
+            margin-bottom: 8px;
+        }
+
+        .banner p {
+            font-size: 13px;
+            color: var(--texto-suave);
+        }
+
+        .banner-img {
+            position: absolute;
+            right: -10px;
+            top: 0;
+            bottom: 0;
+            width: 58%;
+            object-fit: cover;
+            -webkit-mask-image: linear-gradient(to right, transparent, #000 40%);
+            mask-image: linear-gradient(to right, transparent, #000 40%);
+        }
+
+        .coracao-deco {
+            position: absolute;
+            left: 140px;
+            top: 12px;
+            width: 22px;
+            z-index: 1;
+        }
+        
+        img,
+        svg {
+            max-width: 100%;
+        }
+
+        .banner,
+        main,
+        .rodape {
+            width: 100%;
+        }
+
+        main {
+            padding: 0 clamp(16px, 3vw, 36px) 32px;
+        }
+
+        .banner {
+            min-height: clamp(160px, 22vw, 280px);
+            padding: clamp(20px, 4vw, 48px);
+        }
+
+        .banner-texto {
+            max-width: 58%;
+        }
+
+        .banner h1 {
+            font-size: clamp(24px, 3.2vw, 42px);
+        }
+
+        .banner p {
+            font-size: clamp(13px, 1.3vw, 17px);
+        }
+
+        .banner-img {
+            width: 52%;
+            right: 0;
+            object-position: center;
+        }
+
+
+        .topo {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            width: 100%;
+            min-height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+
+            padding: 12px clamp(16px, 4vw, 36px);
+
+            background: rgba(255, 253, 251, 0.97);
+            border-bottom: 1px solid #f3edf1;
+            box-shadow: 0 4px 18px rgba(24, 55, 101, 0.05);
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-sizing: border-box;
+        }
+
+
+        /* ========================================
+   LOGO E IDENTIFICAÇÃO
+======================================== */
+
+        .marca {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            flex: 1 1 auto;
+            min-width: 0;
+            max-width: calc(100% - 60px);
+
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* A logo é uma imagem, não um SVG */
+
+        .marca img {
+            display: block;
+
+            width: 46px;
+            height: 46px;
+            flex: 0 0 46px;
+
+            object-fit: contain;
+            object-position: center;
+            border-radius: 8px;
+        }
+
+        .marca-texto {
+            display: flex;
+            flex-direction: column;
+
+            min-width: 0;
+            line-height: 1.2;
+        }
+
+        .marca-texto small {
+            color: var(--navy);
+            font-size: 11px;
+        }
+
+        .marca-texto strong {
+            color: var(--navy);
+            font-size: clamp(15px, 2vw, 21px);
+            letter-spacing: -0.35px;
+            overflow-wrap: anywhere;
+        }
+
+        .marca-texto em {
+            margin-top: 4px;
+
+            color: var(--pink-dark);
+            font-size: clamp(7px, 0.9vw, 9px);
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            line-height: 1.35;
+        }
+
+
+        /* ========================================
+   BOTÃO HAMBÚRGUER
+======================================== */
+
+
+        .btn-menu {
+            width: 44px;
+            height: 44px;
+            flex: 0 0 44px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            margin: 0;
+            padding: 0;
+
+            border: 1px solid #f2d9e5;
+            border-radius: 12px;
+
+            background: var(--rosa-claro);
+            cursor: pointer;
+
+            position: relative;
+            z-index: 101;
+        }
+
+        .btn-menu span {
+            display: block;
+            width: 21px;
+            height: 3px;
+
+            background: #0a0a0a;
+            border-radius: 3px;
+
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        /* Acessibilidade do botão */
+
+        .btn-menu:focus-visible,
+        .fechar:focus-visible,
+        .gaveta nav a:focus-visible {
+            outline: 3px solid var(--yellow);
+            outline-offset: 3px;
+        }
+
+        /* ========================================
+   GAVETA / MENU LATERAL
+======================================== */
+
+        .gaveta {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            display: flex;
+            justify-content: flex-end;
+
+            background: rgba(16, 41, 79, 0.65);
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            transition: opacity 0.25s ease;
+        }
+
+        .gaveta.aberta {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+
+        .gaveta-painel {
+            width: min(88%, 370px);
+            height: 100%;
+            max-height: 100%;
+
+            overflow-y: auto;
+            padding: 22px 20px 30px;
+            box-sizing: border-box;
+
+            /* Fundo sólido */
+            background: #fffafb;
+
+            box-shadow: -10px 0 35px rgba(16, 41, 79, 0.18);
+
+            transform: translateX(100%);
+            transition: transform 0.28s ease;
+        }
+
+        .gaveta.aberta .gaveta-painel {
+            transform: translateX(0);
+        }
+
+
+        /* Cabeçalho da gaveta */
+
+        .gaveta-cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            gap: 16px;
+
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+
+            border-bottom: 1px solid var(--line);
+
+            color: var(--navy);
+            font-size: 18px;
+        }
+
+        /* Botão fechar */
+
+        .fechar {
+            width: 42px;
+            height: 42px;
+            flex: 0 0 42px;
+
+            display: grid;
+            place-items: center;
+
+            border: 0;
+            border-radius: 12px;
+
+            background: var(--pink-pale);
+            color: var(--pink-dark);
+
+            font-size: 30px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        /* Links do menu */
+
+        .gaveta nav {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .gaveta nav a {
+            min-height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+
+            padding: 12px 14px;
+            box-sizing: border-box;
+
+            border: 1px solid transparent;
+            border-radius: 13px;
+
+            color: var(--navy);
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .gaveta nav a span {
+            color: #e8337a;
+            font-size: 25px;
+            line-height: 1;
+        }
+
+        .gaveta nav a:hover {
+            background: var(--pink-pale);
+            border-color: #f5d5e4;
+            transform: translateX(2px);
+        }
+
+        /* ==========================
+   FAIXAS COLORIDAS
+========================== */
+
+        .equipe {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px;
+
+            margin: 0 auto;
+        }
+
+        .faixa {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            min-height: 220px;
+            padding: 28px 8%;
+            isolation: isolate;
+            overflow: hidden;
+            transition: background-color 0.3s ease, filter 0.3s ease;
+
+            align-self: flex-start;
+            filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.15));
+
+            border-radius: 20px 20px 0px 20px;
+        }
+
+        .faixa::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            border-width: 15px 0 0 15px;
+            border-style: solid;
+            border-color: #007bff transparent transparent transparent;
+            transition: border-color 0.3s ease;
+
+        }
+
+        .faixa:nth-child(even) {
+
+            align-self: flex-end;
+
+            border-radius: 15px 15px 15px 0px;
+        }
+
+
+        .faixa:nth-child(even)::after {
+            right: auto;
+            left: 0;
+            border-width: 15px 15px 0 0;
+        }
+
+
+        .faixa:hover {
+            filter: brightness(1.08);
+
+        }
+
+        .branca {
+            background: #e9e9e9;
+
+        }
+
+        .roxo {
+            background: var(--roxo);
+
+        }
+
+        .lilas {
+            background: var(--lilas);
+        }
+
+        .amarela {
+            background: var(--amarelo);
+        }
+
+        .vermelha {
+            background: var(--vermelho);
+        }
+
+        .rosa {
+            background: var(--rosa);
+        }
+
+        .azul {
+            background: var(--azul);
+        }
+
+        .verde {
+            background: var(--verde);
+        }
+
+        .informacoes {
+            position: relative;
+            z-index: 2;
+            max-width: 75%;
+
+        }
+
+        .informacoes h2 {
+            font-size: clamp(25px, 4.2vw, 48px);
+            font-weight: 400;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+            margin-bottom: 17px;
+            overflow-wrap: anywhere;
+            color: #000;
+        }
+
+        .informacoes p {
+            font-size: clamp(12px, 2vw, 20px);
+            font-weight: 300;
+            line-height: 1.3;
+            overflow-wrap: anywhere;
+            color: #000;
+        }
+
+        .informacoes strong {
+            font-weight: 500;
+            color: #000;
+        }
+
+        /* ==========================
+   FITINHAS DE CONSCIENTIZAÇÃO
+========================== */
+
+        .decoracao {
+            position: absolute;
+            z-index: 1;
+            right: 7%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            width: 150px;
+            opacity: 0.96;
+            pointer-events: none;
+        }
+
+        .fitinha {
+            width: 115px;
+            height: 145px;
+            overflow: visible;
+            filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
+            animation: flutuar 4s ease-in-out infinite;
+        }
+
+        .fita-base {
+            fill: currentColor;
+            stroke: rgba(255, 255, 255, 0.4);
+            stroke-width: 1;
+            stroke-linejoin: round;
+        }
+
+        .fita-recorte {
+            fill: #ffffff;
+            opacity: 0.17;
+        }
+
+        .roxa-fita {
+            color: #d9a6ff;
+        }
+
+        .amarela-fita {
+            color: #ffec8b;
+        }
+
+        .vermelha-fita {
+            color: #ffb0b0;
+        }
+
+        .rosa-fita {
+            color: #ffc4e7;
+        }
+
+        .azul-fita {
+            color: #9edfff;
+        }
+
+        .verde-fita {
+            color: #9ff1c6;
+        }
+
+        .mes {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            opacity: 0.85;
+            margin: 0;
+        }
+
+        @keyframes flutuar {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-3deg);
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(3deg);
+            }
+        }
+
+
+        @media (min-width: 1201px) {
+            .topo {
+                padding-left: max(36px, calc((100vw - 1200px) / 2));
+                padding-right: max(36px, calc((100vw - 1200px) / 2));
+            }
+
+            .banner {
+                border-radius: 0 0 18px 18px;
+            }
+        }
+        /* ==========================
+   RESPONSIVIDADE
+========================== */
+
+        @media (min-width: 1100px) {
+            .topo {
+                width: 100%;
+                min-height: 90px;
+                padding: 16px 48px;
+            }
+
+            .marca img {
+                width: 54px;
+                height: 54px;
+                flex-basis: 54px;
+            }
+
+            .marca-texto strong {
+                font-size: 21px;
+            }
+
+            .marca-texto small {
+                font-size: 13px;
+            }
+
+            .marca-texto em {
+                font-size: 9px;
+            }
+
+            .faixa {
+                min-height: 225px;
+                padding-left: 8%;
+                padding-right: 10%;
+            }
+
+            .decoracao {
+                right: 13%;
+            }
+
+            .fitinha {
+                width: 125px;
+                height: 155px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .app {
+                max-width: 100%;
+            }
+
+            .topo {
+                min-height: 70px;
+                padding: 10px 14px;
+                gap: 10px;
+            }
+
+            .marca {
+                gap: 8px;
+                max-width: calc(100% - 50px);
+            }
+
+            .marca img {
+                width: 40px;
+                height: 40px;
+                flex-basis: 40px;
+            }
+
+            .marca-texto small {
+                font-size: 10px;
+            }
+
+            .marca-texto strong {
+                font-size: clamp(13px, 4vw, 17px);
+                letter-spacing: -0.3px;
+            }
+
+            .marca-texto em {
+                font-size: clamp(6px, 1.8vw, 8px);
+                letter-spacing: 0.1px;
+            }
+
+            .btn-menu {
+                width: 42px;
+                height: 42px;
+                flex-basis: 42px;
+            }
+
+            .gaveta-painel {
+                width: min(88%, 370px);
+                padding: 20px 16px 26px;
+            }
+
+            .faixa {
+                min-height: 185px;
+                padding: 25px 6%;
+            }
+
+            .informacoes {
+                max-width: 65%;
+            }
+
+            .informacoes h2 {
+                font-size: clamp(21px, 5.2vw, 30px);
+                letter-spacing: -0.8px;
+                margin-bottom: 12px;
+            }
+
+            .informacoes p {
+                font-size: clamp(10px, 2.6vw, 13px);
+                line-height: 1.5;
+                text-align: justify;
+            }
+
+            .decoracao {
+                right: 1%;
+                width: 95px;
+            }
+
+            .tema-icone {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                margin: 0;
+            }
+
+            .mes {
+                font-size: 8px;
+                letter-spacing: 1.5px;
+            }
+
+        }
+
+         @media (max-width: 599px) {
+            .app {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .topo {
+                min-height: 68px;
+                padding: 10px 14px;
+            }
+
+            .marca {
+                gap: 8px;
+                max-width: calc(100% - 48px);
+            }
+
+            .marca img {
+                width: 38px;
+                height: 38px;
+                flex-basis: 38px;
+            }
+
+            .marca-texto small {
+                font-size: 10px;
+            }
+
+            .marca-texto strong {
+                font-size: clamp(13px, 4vw, 17px);
+            }
+
+            .marca-texto em {
+                font-size: clamp(7px, 2vw, 9px);
+            }
+
+            .banner {
+                min-height: 160px;
+                padding: 18px 14px;
+            }
+
+            .banner-texto {
+                max-width: 62%;
+            }
+
+            .banner h1 {
+                font-size: clamp(20px, 5.5vw, 28px);
+            }
+
+            .banner p {
+                font-size: clamp(11px, 3vw, 14px);
+            }
+
+            .banner-img {
+                width: 52%;
+                right: -8px;
+            }
+
+            .coracao-deco {
+                left: 35%;
+                width: 20px;
+            }
+
+            main {
+                padding: 0 14px 24px;
+            }
+
+            h2 {
+                font-size: 17px;
+                margin: 22px 0 12px;
+            }
+
+            .temas {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .tema {
+                min-height: 108px;
+                padding: 14px 8px;
+                font-size: 12px;
+            }
+
+            .tema-icone {
+                width: clamp(80px, 8vw, 34px);
+                height: clamp(80px, 8vw, 34px);
+                object-fit: cover;
+                margin: 0;
+            }
+
+            .gaveta-painel {
+                width: min(88%, 370px);
+                padding: 20px 16px 26px;
+            }
+
+            .rodape {
+                padding: 38px 14px 20px;
+            }
+        }
+
+
+        @media (max-width: 380px) {
+            .topo {
+                min-height: 64px;
+                padding: 8px 10px;
+                gap: 7px;
+            }
+
+            .marca {
+                gap: 6px;
+                max-width: calc(100% - 45px);
+            }
+
+            .marca img {
+                width: 34px;
+                height: 34px;
+                flex-basis: 34px;
+            }
+
+            .marca-texto strong {
+                font-size: 13px;
+            }
+
+            .marca-texto em {
+                font-size: 6px;
+                letter-spacing: 0;
+            }
+
+            .btn-menu {
+                width: 38px;
+                height: 38px;
+                flex-basis: 38px;
+            }
+
+            .btn-menu span {
+                width: 19px;
+            }
+
+            .gaveta-painel {
+                width: 90%;
+                padding-inline: 14px;
+            }
+
+            
+            .banner {
+                min-height: 145px;
+                padding: 14px 10px;
+            }
+
+            .banner h1 {
+                font-size: 19px;
+            }
+
+            .faixa {
+                min-height: 170px;
+                padding: 20px 5%;
+            }
+
+            .informacoes {
+                max-width: 80%;
+            }
+
+            .informacoes h2 {
+                font-size: 21px;
+            }
+
+            .informacoes p {
+                font-size: 10px;
+                text-align: justify;
+            }
+
+            .decoracao {
+                right: -5px;
+                width: 75px;
+            }
+
+
+        }
+
+        /* Respeita a preferência por menos movimento */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        .btn-menu span,
+        .gaveta,
+        .gaveta-painel,
+        .gaveta nav a {
+            transition: none;
+        }
+
+
+        .site-footer {
+            background: #183765;
+            color: white;
+            text-align: center;
+            padding: 42px 20px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-footer h2 {
+            color: white;
+            font-size: 29px;
+            margin-bottom: 8px;
+        }
+
+        .site-footer>p {
+            color: #d6e4f8;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            padding: 10px 16px;
+            min-height: 42px;
+
+            color: #fcfcfc;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+
+            border-radius: 8px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .footer-links a span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+        }
+
+        .footer-links a b {
+            display: inline;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--pink);
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: -30px;
+            left: -5%;
+            width: 110%;
+            height: 48px;
+            border-radius: 50%;
+            background: #fffdfb;
+        }
+
+        .footer-location {
+            margin-bottom: 7px;
+        }
+
+        .copyright {
+            font-size: 11px !important;
+            margin-bottom: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 28px;
+        }
+
+        .footer-links a {
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 32px;
+        }
+
+        .footer-links a i {
+            font-size: 25px;
+            color: #fff;
+        }
+
+
+        @media (max-width: 480px) {
+            .footer-links {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .tema-icone {
+            display: block;
+            width: 150%;
+            height: 150%;
+            max-width: 2100px;
+            max-height: 2100px;
+            object-fit: cover;
+            flex-shrink: 0;
+            border-radius: 50%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menu -->
+    <header class="topo">
+        <a class="marca" href="index.html" aria-label="Instituto Eula Paula Rocha - início">
+
+            <img src="img/logo.jpg" id="logo" alt="Logo do Instituto Eula Paula Rocha">
+
+            <span class="marca-texto">
+                <small>Instituto</small>
+                <strong>Eula Paula Rocha</strong>
+                <em>Juntos por uma comunidade mais saudável</em>
+            </span>
+        </a>
+
+        <button class="btn-menu" id="abrirMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"
+            type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="gaveta" id="menu" aria-hidden="true">
+        <div class="gaveta-painel" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+            <div class="gaveta-cabecalho">
+
+                <button class="fechar" id="fecharMenu" type="button" aria-label="Fechar menu">&times;</button>
+            </div>
+            <nav aria-label="Navegação principal">
+                <a href="index.html#atuacao">Início <span aria-hidden="true">›</span></a>
+                <a href="#equipe">Calendário da Saúde <span aria-hidden="true">›</span></a>
+                <a href="#contato">Contato <span aria-hidden="true">›</span></a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="app">
+        <section class="banner">
+           
+            <div class="banner-texto">
+                <h1>Saúde e prevenção</h1>
+                <p>Cuidar hoje é garantir um amanhã melhor.</p>
+            </div> 
+            
+            <svg class="coracao-deco" viewBox="0 0 24 24" fill="none" stroke="#f2b84b" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s-8-5-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 6-8 11-8 11z" />
+            </svg>
+            <!-- Troque pelo caminho da sua imagem (estetoscópio com coração rosa) -->
+            <img class="banner-img" src="img/estetoscopio.png" alt="" onerror="this.style.display='none'">
+        </section>
+    
+
+    <main class="equipe">
+
+        <!-- FAIXA 1 -->
+        <section class="faixa branca" style="border-radius: 0 0 20px 0;">
+            <div class="informacoes">
+                <h2>Janeiro Branco</h2>
+                <p style="margin:0 0 10px 0">O Janeiro Branco é uma campanha brasileira, criada em 2014 pelo psicólogo
+                    Leonardo Abrahão, dedicada
+                    à conscientização sobre a saúde mental e emocional.</p>
+                <p><strong>Objetivo: </strong>Quebrar tabus, incentivar o diálogo sobre emoções e promover a busca por
+                    ajuda profissional para lidar com questões como ansiedade, depressão e esgotamento (burnout).</p>
+            </div>
+
+            <div class="decoracao">
+
+                <img src="img/laco branco.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <!-- FAIXA 2 -->
+        <section class="faixa roxo">
+            <div class="informacoes">
+                <h2>Fevereiro Roxo</h2>
+                <p style="margin:0 0 10px 0">O Fevereiro Roxo é uma campanha de conscientização sobre o diagnóstico
+                    precoce e o tratamento de três
+                    doenças crônicas e incuráveis: Lúpus, Fibromialgia e Alzheimer.</p>
+                <p><strong>Objetivo: </strong>Estimular o diagnóstico precoce, reduzir o preconceito em torno dessas
+                    patologias e garantir melhor qualidade de vida aos pacientes por meio do tratamento adequado.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco roxo.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <!-- FAIXA 3 -->
+        <section class="faixa lilas">
+            <div class="informacoes">
+                <h2>Março Lilás</h2>
+                <p style="margin:0 0 10px 0">O Março Lilás é dedicado à conscientização e prevenção do câncer de colo do
+                    útero, a quarta causa de morte por câncer em mulheres no Brasil.</p>
+                <p><strong>Objetivo:</strong> Alertar sobre a importância de realizar exames periódicos, principalmente
+                    o
+                    Papanicolau, e incentivar a vacinação contra o HPV em jovens.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco lilas.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <!-- FAIXA 4 -->
+        <section class="faixa verde">
+            <div class="informacoes">
+                <h2>Abril Verde</h2>
+                <p style="margin:0 0 10px 0">O Abril Verde é a campanha voltada para a segurança e saúde no ambiente de
+                    trabalho.</p>
+                <p><strong>Objetivo:</strong> Conscientizar empresas e trabalhadores sobre a prevenção de acidentes
+                    laborais e doenças ocupacionais, promovendo ambientes de trabalho mais seguros e saudáveis.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco verde.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <!-- FAIXA 5 -->
+        <section class="faixa amarela">
+            <div class="informacoes">
+                <h2>Maio Amarelo</h2>
+                <p style="margin:0 0 10px 0">O Maio Amarelo foca na redução de acidentes e segurança no trânsito.</p>
+                <p><strong>Objetivo:</strong> Chamar a atenção da sociedade para o alto índice de mortes e feridos no
+                    trânsito globalmente, promovendo comportamentos mais responsáveis ao dirigir, pedalar ou caminhar.
+                </p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco amarelo.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <!-- FAIXA 6 -->
+        <section class="faixa vermelha">
+            <div class="informacoes">
+                <h2>Junho Vermelho</h2>
+                <p style="margin:0 0 10px 0">O Junho Vermelho é o mês de incentivo à doação de sangue.</p>
+                <p><strong>Objetivo:</strong> Estimular a população a doar sangue voluntariamente para abastecer os
+                    estoques dos hemocentros, especialmente no período de inverno e férias, quando o volume de doações
+                    costuma cair de forma crítica.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco vermelho.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <section class="faixa amarela">
+            <div class="informacoes">
+                <h2>Julho Amarelo</h2>
+                <p style="margin:0 0 10px 0">O Julho Amarelo é a campanha voltada para a luta e o combate às hepatites
+                    virais.</p>
+                <p><strong>Objetivo: </strong>Reforçar as ações de vigilância, prevenção e controle dessas infecções,
+                    incentivando a realização de testes rápidos e a vacinação disponível na rede pública.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco amarelo.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <section class="faixa lilas">
+            <div class="informacoes">
+                <h2>Agosto Lilás</h2>
+                <p style="margin:0 0 10px 0">O Agosto Lilás é a campanha de enfrentamento e fim da violência contra a
+                    mulher.</p>
+                <p><strong>Objetivo: </strong>Celebrar o aniversário da Lei Maria da Penha, divulgar os canais de
+                    denúncia (como o Ligue 180) e conscientizar a população sobre a importância de identificar e
+                    combater as diversas formas de agressão.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco lilas.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <section class="faixa amarela">
+            <div class="informacoes">
+                <h2>Setembro Amarelo</h2>
+                <p style="margin:0 0 10px 0">O Setembro Amarelo é uma das campanhas mais consolidadas no país, focada na
+                    prevenção do suicídio.
+                </p>
+                <p><strong>Objetivo: </strong> Promover a valorização da vida, quebrar os estigmas em torno dos
+                    transtornos psicológicos e instruir as pessoas sobre como e onde buscar apoio emocional
+                    especializado.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco amarelo.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <section class="faixa rosa">
+            <div class="informacoes">
+                <h2>Outubro Rosa</h2>
+                <p style="margin:0 0 10px 0">O Outubro Rosa é a tradicional mobilização mundial voltada para a detecção
+                    precoce do câncer de mama.
+                </p>
+                <p><strong>Objetivo: </strong> Estimular as mulheres a realizarem o autoexame e a mamografia de
+                    rastreamento, além de compartilhar informações seguras sobre os fatores de risco e o tratamento
+                    adequado.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco rosa.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <section class="faixa azul">
+            <div class="informacoes">
+                <h2>Novembro Azul</h2>
+                <p style="margin:0 0 10px 0">O Novembro Azul é dedicado à conscientização global sobre a saúde do homem,
+                    com ênfase no câncer de
+                    próstata.</p>
+                <p><strong>Objetivo: </strong>Romper o preconceito masculino em relação aos exames preventivos (como o
+                    de toque retal e PSA) e incentivar o cuidado integral com a saúde física e mental dos homens.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco azul.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+        <section class="faixa vermelha">
+            <div class="informacoes">
+                <h2>Dezembro Vermelho</h2>
+                <p style="margin:0 0 10px 0">O Dezembro Vermelho encerra o calendário anual com a campanha de
+                    mobilização nacional na prevenção do
+                    HIV/Aids e outras Infecções Sexualmente Transmissíveis (ISTs).</p>
+                <p><strong>Objetivo: </strong> Promover o uso de preservativos, expandir o acesso a testes diagnósticos
+                    rápidos, combater o preconceito social contra pessoas que vivem com o vírus e incentivar a adesão
+                    rigorosa ao tratamento.</p>
+            </div>
+
+            <div class="decoracao">
+                <img src="img/laco vermelho.png" alt="" class="tema-icone">
+            </div>
+        </section>
+
+    </main>
+    </div>
+
+    <footer class="site-footer" id="contato">
+        <div class="footer-wave"></div>
+        <h2>Vamos conversar?</h2>
+        <p>Entre em contato para saber mais sobre o trabalho do instituto.</p>
+
+        <div class="footer-links">
+            <a href="https://instagram.com/instituto.eulapaularocha" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5585988330211" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:instituto.epr@gmail.com" aria-label="E-mail">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+        </div>
+
+        <p class="footer-location">Maracanaú - CE</p>
+        <p class="copyright">© Instituto Eula Paula Rocha</p>
+    </footer>
+
+    <script>
+        (() => {
+            const menu = document.getElementById("menu");
+            const abrir = document.getElementById("abrirMenu");
+            const fechar = document.getElementById("fecharMenu");
+
+            if (!menu || !abrir || !fechar) {
+                console.error("Menu: confira os elementos #menu, #abrirMenu e #fecharMenu no index.html.");
+                return;
+            }
+
+            function alternarMenu(aberto) {
+                menu.classList.toggle("aberta", aberto);
+                menu.setAttribute("aria-hidden", String(!aberto));
+                abrir.setAttribute("aria-expanded", String(aberto));
+                abrir.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+                document.body.style.overflow = aberto ? "hidden" : "";
+
+                if (aberto) fechar.focus();
+                else abrir.focus();
+            }
+
+            abrir.addEventListener("click", () => alternarMenu(true));
+            fechar.addEventListener("click", () => alternarMenu(false));
+
+            menu.addEventListener("click", (evento) => {
+                if (evento.target === menu) alternarMenu(false);
+            });
+
+            menu.querySelectorAll("nav a").forEach((link) => {
+                link.addEventListener("click", () => alternarMenu(false));
+            });
+
+            document.addEventListener("keydown", (evento) => {
+                if (evento.key === "Escape" && menu.classList.contains("aberta")) {
+                    alternarMenu(false);
+                }
+            });
+        })();
+    </script>
+
+
+</body>
+
+</html>
